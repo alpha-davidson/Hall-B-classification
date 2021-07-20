@@ -8,7 +8,7 @@ f = h5py.File('Pix2Pix_oneTrack')
 
 Event = []#empty list where negative data will go
 Track = []#empty list where positive data will go
-for filename in sorted(glob.iglob("/home/hoyle/Hall_b/oneTrack/*_all_*")):#iterates through negative files
+for filename in sorted(glob.iglob("/home/DAVIDSON/anhoyle/phy1/Hall_b/oneTrack/*_all_*")):#iterates through negative files
     img = Image.open(filename)
     section_border = np.zeros((1,128,3))
     border = (8,45)
@@ -25,7 +25,7 @@ for filename in sorted(glob.iglob("/home/hoyle/Hall_b/oneTrack/*_all_*")):#itera
     Event.append(new_img)
     
 
-for filename in sorted(glob.iglob("/home/hoyle/Hall_b/oneTrack/*_truth_*")):#iterates through positive files
+for filename in sorted(glob.iglob("/home/DAVIDSON/anhoyle/phy1/Hall_b/oneTrack/*_truth_*")):#iterates through positive files
     img = Image.open(filename)
     section_border = np.zeros((1,128,3))
     border = (8,45)
